@@ -5,12 +5,20 @@ import streamlit as st
 import sys
 import os
 
-sys.path.append(os.path.join(os.path.dirname(__file__), "../../src"))
-
-from car_repository import get_cars, count_cars, get_brands, get_fuel_types, get_summary_stats
-from data_processor  import build_filter_summary, cars_to_dataframe
-from utils           import load_css, render_car_cards, render_pagination, render_metrics, fmt_price
-
+#sys.path.append(os.path.join(os.path.dirname(__file__), "../../src"))
+sys.path.append(
+    os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+)
+from src.car_repository import get_cars, count_cars, get_brands, get_fuel_types, get_summary_stats
+from src.data_processor  import build_filter_summary, cars_to_dataframe
+#from src.utils           import load_css, render_car_cards, render_pagination, render_metrics, fmt_price
+from src.utils import (
+    load_css,
+    render_car_cards,
+    render_pagination,
+    render_metrics,
+    fmt_price
+)
 # ── 페이지 설정 ───────────────────────────────────────────────
 st.set_page_config(page_title="중고차 시세 조회", page_icon="🚗", layout="wide")
 load_css("assets/app.css")
