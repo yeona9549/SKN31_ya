@@ -3,13 +3,14 @@
 
 import mysql.connector
 import pandas as pd
+import os
 
 # ── DB 접속 정보 ──────────────────────────────────────────────
 conn = mysql.connector.connect(
-    host=" ", # IP(host) 입력
-    port=" ", # port번호 입력
-    user=" ", # username 입력
-    password=" ", # MySQL 비밀번호로 변경
+    host="localhost", # IP(host) 입력
+    port="3306", # port번호 입력
+    user="root", # username 입력
+    password="dusdn369", # MySQL 비밀번호로 변경
     charset="utf8mb4" # 이모지 지원 UTF-8 Most Bytes 4로 설정
 )
 cursor = conn.cursor()
@@ -39,7 +40,12 @@ conn.commit()
 print("Table Check")
 
 # ── CSV 적재 ──────────────────────────────────────────────────
-df = pd.read_csv("src/csv/usedcar_info.csv", encoding="cp949")
+
+base_dir = os.path.dirname(__file__)
+csv_path = os.path.join(base_dir, "usedcar_info.csv")
+
+df = pd.read_csv(csv_path, encoding="cp949")
+#df = pd.read_csv("src/csv/usedcar_info.csv", encoding="cp949")
 
 # 컬럼명 -> DB 컬럼에 맞게 정리
 df = df.rename(columns={
