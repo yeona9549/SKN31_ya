@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 사이드바 배경 */
+[data-testid="stSidebar"] {
+    background: #edeef1;
+    border-right: 1px solid #edeef1;
+}
+[data-testid="stSidebar"] * {
+    color: #7b82a8 !important;
+}
+
+/* 섹션 헤더 */
+.section-header {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #7b82a8 !important;
+    margin: 1.4rem 0 0.6rem 0;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid #2d3250;
+}
+
+/* 브랜드 배지 */
+.brand-group-label {
+    font-size: 0.7rem;
+    color: #7b82a8 !important;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+}
+
+/* 메인 헤더 */
+.main-header {
+    background: linear-gradient(135deg, #edeef1 0%, #edeef1 100%);
+    padding: 2.5rem 2rem 2rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+.main-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #7b82a8 !important;
+    margin: 0;
+}
+.main-subtitle {
+    font-size: 0.9rem;
+    color: #9099c4;
+    margin-top: 0.4rem;
+}
+
+/* 조회 결과 카드 */
+.result-card {
+    background: #ffffff;
+    border: 1px solid #e8eaf6;
+    border-radius: 12px;
+    padding: 1.2rem 1.4rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+}
+.result-card:hover {
+    box-shadow: 0 6px 20px rgba(45,50,80,0.13);
+}
+.car-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1a1e2e;
+}
+.car-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #e05c3a;
+}
+.car-detail {
+    font-size: 0.8rem;
+    color: #888;
+}
+.badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-right: 4px;
+    font-weight: 500;
+}
+.badge-fuel  { background: #eef2ff; color: #4f5fbd; }
+.badge-type  { background: #fff3e0; color: #e07b20; }
+.badge-acc-n { background: #e8f5e9; color: #2e7d32; }
+.badge-acc-y { background: #fce4ec; color: #c62828; }
+
+/* 필터 요약 바 */
+.filter-summary {
+    background: #f3f4fb;
+    border: 1px solid #dde0f5;
+    border-radius: 10px;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.82rem;
+    color: #4f5fbd;
+    margin-bottom: 1.5rem;
+}
+
+/* 슬라이더 값 표시 */
+.slider-value {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4f5fbd !important;
+}
+
+/* 검색 버튼
+div[data-testid="stButton"] > button {
+    background: rgb(255, 75, 75);
+    color: white !important;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    width: 100%;
+    letter-spacing: 0.04em;
+}
+div[data-testid="stButton"] > button:hover {
+    background: linear-gradient(135deg, #3d4da0, #6a72a0);
+} */
+
+/* 초기화 버튼 */
+.reset-btn > div[data-testid="stButton"] > button {
+    background: transparent !important;
+    color: #9099c4 !important;
+    border: 1px solid #3d4470 !important;
+}
+
+/*상단 메뉴*/
+.nav-container { display: flex; gap: 20px; border-bottom: 2px solid #eee; }
+.nav-item { text-decoration: none; color: black; padding: 10px; position: relative; }
+.nav-item:hover { color:rgb(255, 75, 75); }
+.active { color: rgb(255, 75, 75); font-weight: bold; border-bottom: 5px solid rgb(255, 75, 75) }
+.nav-container > a { text-decoration-line: none; }
