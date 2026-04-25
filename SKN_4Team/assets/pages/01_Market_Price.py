@@ -19,6 +19,7 @@ from src.utils import (
     render_metrics,
     fmt_price
 )
+
 # ── 페이지 설정 ───────────────────────────────────────────────
 st.set_page_config(page_title="중고차 시세 조회", page_icon="🚗", layout="wide")
 load_css("assets/app.css")
